@@ -8,5 +8,10 @@ namespace MVCApp.Controllers
         {
             return View();
         }
+
+        public string Hello()
+        {
+            return "Who's there?";
+        }
     }
 }
