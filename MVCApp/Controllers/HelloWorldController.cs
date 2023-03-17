@@ -22,15 +22,27 @@ namespace MVCApp.Controllers
             dogs.Add(dogViewModel);
             return RedirectToAction(nameof(Index));
         }
-        public IActionResult Hello()
+        /*public IActionResult Hello()
         {
             DogViewModel doggo = new DogViewModel()
             {
                 Name = "Shibimaru",
-                Age =
+                Age = 2
 5
             };
             return View(doggo);
+        }*/
+        
+        public IActionResult HotelBookingDetails()
+        {
+            HotelBookingModel hotel = new HotelBookingModel()
+            {
+            Id = 1,
+            GuestName = "Firuz",
+            DateStart = new DateTime(2023, 3, 17, 0, 0, 0),
+            DateEnd = new DateTime(2023, 3, 24, 0, 0, 0)
+            };
+            return View(hotel);
         }
     }
 }
