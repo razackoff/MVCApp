@@ -17,7 +17,13 @@ namespace MVCApp.Controllers
 
         public IActionResult Create()
         {
-            return View();
+            var dogVm = new DogViewModel();
+            return View(dogVm);
+        }
+
+        public IActionResult CreateDog(DogViewModel dogViewModel)
+        {
+            return View("Index");
         }
         public IActionResult Hello()
         {
