@@ -8,13 +8,26 @@ namespace MVCApp.Controllers
         public IActionResult Index()
         {
             DogViewModel doggo = new DogViewModel() 
-            { Name="Sif", Age=2};
+            { 
+                Name="Sif",
+                Age=2
+            };
             return View(doggo);
         }
 
-        public IActionResult Hello()
+        public IActionResult Create()
         {
             return View();
+        }
+        public IActionResult Hello()
+        {
+            DogViewModel doggo = new DogViewModel()
+            {
+                Name = "Shibimaru",
+                Age =
+5
+            };
+            return View(doggo);
         }
     }
 }
